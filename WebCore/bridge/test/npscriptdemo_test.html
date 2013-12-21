@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+     <title>TEST create plugin object in JS</title>
+      <body id="tbody" >
+      	<p id ="spara" >scriptable plugin test page!</p><br />
+        property test:
+      	int property<input id = "fooinput"></input>
+      	<button onclick = "btnsetfoo();">set FOO</button>
+      	<button onclick = "btngetfoo();">get FOO</button><br />
+      	string property<input id = "strinput"></input>
+      	<button onclick = "btnsetstr();">set STR</button>
+      	<button onclick = "btngetstr();">get STR</button><br /><br />
+        void in void out function <button onclick ="btnclick();" >FUNC</button> and call a js function <br />
+        int in int out function: <br />int arg in<input id = "fargin"></input><br />
+        result<input id = "fargout"></input><button onclick = "btni2ifunc();">Ifunc</button><br />
+        string in string out function: <br />string arg in<input id = "fargsin"></input><br />
+        result<input id = "fargsout"></input><button onclick = "btns2sfunc();">Sfunc</button><br />
+     </body>
+    <script type="text/javascript">
+    var pgph = document.getElementById("spara");
+    var obj = document.createElement("object");
+    obj.type = "application/x-scriptobj";
+    obj.width = 100;
+    obj.height = 100;
+    insertAfter(obj,pgph);
+    obj.OnJsFunc = objJSfunc;
+
+    function objJSfunc()
+    {
+      alert("JS function called!");
+    }
+
+    function insertAfter(newEl, targetEl)
+    {
+    	var parentEl = targetEl.parentNode;
+    	if(parentEl.lastChild == targetEl)
+    	{
+    		parentEl.appendChild(newEl);
+    	}else
+    	{
+    		parentEl.insertBefore(newEl,targetEl.nextSibling);
+    	}
+    }
+
+    function btnclick()
+    {
+    	obj.func();
+    }
+
+    function btnsetfoo()
+    {
+    	var val = document.getElementById("fooinput");
+    	obj.foo = parseInt(val.value) ;
+    }
+
+    function btngetfoo()
+    {
+    	alert(obj.foo);
+    }
+
+    function btnsetstr()
+    {
+    	var val = document.getElementById("strinput");
+    	obj.str = val.value;
+    }
+
+    function btngetstr()
+    {
+    	alert(obj.str);
+    }
+
+    function btni2ifunc()
+    {
+      var val = document.getElementById("fargin");
+      var rval = document.getElementById("fargout");
+      rval.value = obj.funci2i(parseInt(val.value));
+    }
+
+    function btns2sfunc()
+    {
+      var val = document.getElementById("fargsin");
+      var rval = document.getElementById("fargsout");
+      rval.value = obj.funcs2s(val.value);
+    }
+    </script>
+</html>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/84890/trunk/Source/WebCore/platform/image-decoders/gif
+END
+GIFImageDecoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/webkit/!svn/ver/84890/trunk/Source/WebCore/platform/image-decoders/gif/GIFImageDecoder.cpp
+END
+GIFImageReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/webkit/!svn/ver/75748/trunk/Source/WebCore/platform/image-decoders/gif/GIFImageReader.h
+END
+GIFImageDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/webkit/!svn/ver/79282/trunk/Source/WebCore/platform/image-decoders/gif/GIFImageDecoder.h
+END
+GIFImageReader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/webkit/!svn/ver/75748/trunk/Source/WebCore/platform/image-decoders/gif/GIFImageReader.cpp
+END

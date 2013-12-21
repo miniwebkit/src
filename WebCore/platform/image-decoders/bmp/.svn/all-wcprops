@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/84890/trunk/Source/WebCore/platform/image-decoders/bmp
+END
+BMPImageReader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repository/webkit/!svn/ver/77429/trunk/Source/WebCore/platform/image-decoders/bmp/BMPImageReader.cpp
+END
+BMPImageDecoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/webkit/!svn/ver/84890/trunk/Source/WebCore/platform/image-decoders/bmp/BMPImageDecoder.cpp
+END
+BMPImageReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repository/webkit/!svn/ver/75748/trunk/Source/WebCore/platform/image-decoders/bmp/BMPImageReader.h
+END
+BMPImageDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/webkit/!svn/ver/75748/trunk/Source/WebCore/platform/image-decoders/bmp/BMPImageDecoder.h
+END

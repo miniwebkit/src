@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repository/webkit/!svn/ver/84890/trunk/Source/WebCore/platform/image-decoders/ico
+END
+ICOImageDecoder.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repository/webkit/!svn/ver/84890/trunk/Source/WebCore/platform/image-decoders/ico/ICOImageDecoder.cpp
+END
+ICOImageDecoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repository/webkit/!svn/ver/75748/trunk/Source/WebCore/platform/image-decoders/ico/ICOImageDecoder.h
+END

@@ -1,0 +1,54 @@
+/*
+ * Copyright (C) Research In Motion Limited 2011. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public License
+ * along with this library; see the file COPYING.LIB.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ * Boston, MA 02110-1301, USA.
+ */
+
+#include "config.h"
+#include "TimeEvent.h"
+
+#include "DOMWindow.h"
+
+namespace WebCore {
+
+TimeEvent::TimeEvent()
+    : m_detail(0)
+{
+}
+
+TimeEvent::TimeEvent(const AtomicString& eventType, PassRefPtr<AbstractView> viewArg, int detailArg)
+    : Event(eventType, false, false)
+    , m_view(viewArg)
+    , m_detail(detailArg)
+{
+}
+
+TimeEvent::~TimeEvent()
+{
+}
+
+void TimeEvent::initTimeEvent(const AtomicString& typeArg, PassRefPtr<AbstractView> viewArg, int detailArg)
+{
+    if (dispatched())
+        return;
+
+    initEvent(typeArg, false, false);
+
+    m_view = viewArg;
+    m_detail = detailArg;
+}
+
+} // namespace WebCore
