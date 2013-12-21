@@ -1,0 +1,1 @@
+TestKdGui_d.exe "file:///C:/Users/Administrator/Desktop/LomoStore/Resources/lomoxdemo.html"
