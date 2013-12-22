@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="f:\app_prj\Gui2\kdwebkit\src\3rdparty\webkit_12_31\WebCore\bridge;f:\app_prj\Gui2\kdwebkit\src\3rdparty\webkit_12_31\WebKit\kd\Api"
+				AdditionalIncludeDirectories="../WebCore/bridge;../WebKit/kd/Api"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
