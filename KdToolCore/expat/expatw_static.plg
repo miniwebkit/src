@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: expatw_static - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA848.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_MBCS" /D "_LIB" /D "COMPILED_FROM_DSP" /D "XML_UNICODE_WCHAR_T" /Fo"..\win32\tmp\Release-w_static/" /Fd"..\win32\tmp\Release-w_static/" /FD /c 
+"D:\Program Files\Expat 2.0.1\Source\lib\xmlparse.c"
+"D:\Program Files\Expat 2.0.1\Source\lib\xmlrole.c"
+"D:\Program Files\Expat 2.0.1\Source\lib\xmltok.c"
+"D:\Program Files\Expat 2.0.1\Source\lib\xmltok_impl.c"
+"D:\Program Files\Expat 2.0.1\Source\lib\xmltok_ns.c"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA848.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPA849.tmp" with contents
+[
+/nologo /out:"..\win32\bin\Release\libexpatwMT.lib" 
+"\Program Files\Expat 2.0.1\Source\win32\tmp\Release-w_static\xmlparse.obj"
+"\Program Files\Expat 2.0.1\Source\win32\tmp\Release-w_static\xmlrole.obj"
+"\Program Files\Expat 2.0.1\Source\win32\tmp\Release-w_static\xmltok.obj"
+"\Program Files\Expat 2.0.1\Source\win32\tmp\Release-w_static\xmltok_impl.obj"
+"\Program Files\Expat 2.0.1\Source\win32\tmp\Release-w_static\xmltok_ns.obj"
+]
+Creating command line "link.exe -lib @C:\Users\ADMINI~1\AppData\Local\Temp\RSPA849.tmp"
+<h3>Output Window</h3>
+Compiling...
+xmlparse.c
+xmlrole.c
+xmltok.c
+xmltok_impl.c
+xmltok_ns.c
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+libexpatwMT.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
