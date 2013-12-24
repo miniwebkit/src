@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312"?>
+<VisualStudioProject
+	ProjectType="Intel C++ Project"
+	Version="11.1"
+	Name="SkiaLib"
+	ProjectGUID="{D4916895-B3DA-4B7C-ACD8-08E44B75D907}"
+	VCNestedProjectGUID="{B73EE3B6-92F8-41DF-A2E7-78505C1C2774}"
+	VCNestedProjectFileName="SkiaLib.vcproj">
+	<Configurations/>
+	<Files/>
+</VisualStudioProject>
