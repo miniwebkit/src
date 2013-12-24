@@ -67,7 +67,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="winmm.lib gdi32.lib user32.lib advapi32.lib shell32.lib shlwapi.lib version.lib usp10.lib Psapi.lib ext_d.lib base_d.lib libpngd.lib zlibd.lib Wininet.lib libexpatMT_d.lib"
+				AdditionalDependencies="winmm.lib gdi32.lib user32.lib advapi32.lib shell32.lib shlwapi.lib version.lib usp10.lib Psapi.lib libpngd.lib zlibd.lib Wininet.lib libexpatMT_d.lib SkiaLib_d.lib"
 				OutputFile="$(ProjectDir)\bin\$(ProjectName)_d.dll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="lib"
