@@ -7,8 +7,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "..\graphics\libpn
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\KdToolCore\zlib\zlib.vcproj", "{852F6535-4357-4895-865B-A488EC9FBAB7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libxml2", "libxml2\libxml2.vcproj", "{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "expat_static", "..\KdToolCore\expat\expat_static.vcproj", "{943E7F60-FC0C-4889-959C-533A47D948BD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestKdGui", "..\TestKdGui\TestKdGui.vcproj", "{3C2B2F51-2CC5-4626-944E-2A853BFA6E5F}"
@@ -42,12 +40,6 @@ Global
 		{852F6535-4357-4895-865B-A488EC9FBAB7}.Release_Debug|Win32.Build.0 = Debug|Win32
 		{852F6535-4357-4895-865B-A488EC9FBAB7}.Release|Win32.ActiveCfg = Release|Win32
 		{852F6535-4357-4895-865B-A488EC9FBAB7}.Release|Win32.Build.0 = Release|Win32
-		{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}.Debug|Win32.ActiveCfg = Debug|Win32
-		{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}.Debug|Win32.Build.0 = Debug|Win32
-		{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}.Release_Debug|Win32.ActiveCfg = Debug|Win32
-		{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}.Release_Debug|Win32.Build.0 = Debug|Win32
-		{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}.Release|Win32.ActiveCfg = Release|Win32
-		{9036024D-F21E-4AAD-96AE-8B4F5EE5A2D5}.Release|Win32.Build.0 = Release|Win32
 		{943E7F60-FC0C-4889-959C-533A47D948BD}.Debug|Win32.ActiveCfg = Debug|Win32
 		{943E7F60-FC0C-4889-959C-533A47D948BD}.Debug|Win32.Build.0 = Debug|Win32
 		{943E7F60-FC0C-4889-959C-533A47D948BD}.Release_Debug|Win32.ActiveCfg = Debug|Win32

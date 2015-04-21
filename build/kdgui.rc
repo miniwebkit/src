@@ -26,7 +26,7 @@ LANGUAGE 4, 2
 // remains consistent on all systems.
 
 IDI_KDGUI       ICON         "kdgui.ico"
-IDI_SMALL               ICON         "small.ico"
+//IDI_SMALL               ICON         "small.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //

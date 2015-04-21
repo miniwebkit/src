@@ -13,8 +13,8 @@ using namespace WTF::Unicode;
 
 #include "../include/npruntime.h"
 
-#include "F:/app_prj/Gui2/SonicUIDemo/SonicUI_src/SonicUI/include/injecttool.h"
-#pragma comment(lib, "F:/app_prj/Gui2/SonicUIDemo/SonicUI_src/SonicUI/lib/InjectTool.lib")
+// #include "F:/app_prj/Gui2/SonicUIDemo/SonicUI_src/SonicUI/include/injecttool.h"
+// #pragma comment(lib, "F:/app_prj/Gui2/SonicUIDemo/SonicUI_src/SonicUI/lib/InjectTool.lib")
 #pragma comment(lib, "shlwapi.lib")
 
 #define MAX_LOADSTRING 100
@@ -77,15 +77,12 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
     // Perform application initialization:
     if (!InitInstance (hInstance, nCmdShow, lpCmdLine))
-    {
         return FALSE;
-    }
 
     hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDI_TESTKDGUI));
 
     // Main message loop:
-    while (GetMessage(&msg, NULL, 0, 0))
-    {
+    while (GetMessage(&msg, NULL, 0, 0)) {
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
             TranslateMessage(&msg);
@@ -151,7 +148,6 @@ void CallScript() {
 }
 
 bool _NPInvokeFunction (NPObject *npobj, NPIdentifier name, const NPVariant *args, uint32_t argCount, NPVariant *result) {
-
     NPString callName = NPVARIANT_TO_STRING(args[0]);
     if (0 == strnicmp(callName.UTF8Characters, "ShowHtml", callName.UTF8Length)) {
         OutputDebugStringW(L"ShowHtml");
@@ -191,10 +187,10 @@ static BOOL InitGUI(HINSTANCE hInstance, LPWSTR lpCmdLine)
 {
     WCHAR szPath[MAX_PATH + 1] = {0};
     WCHAR szModPath[MAX_PATH + 1] = {0};
-    LPWSTR pPath = NULL;
+    LPWSTR pPath = L"";
 
-    if (3 > wcslen(lpCmdLine))
-        return FALSE;
+//     if (3 > wcslen(lpCmdLine))
+//         return FALSE;
 
     GetModuleFileNameW(hInstance, szModPath, MAX_PATH);
 
@@ -251,24 +247,4 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow, LPWSTR lpCmdLine)
         return FALSE;
 
     return TRUE;
-}
-
-// Message handler for about box.
-INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
-{
-    UNREFERENCED_PARAMETER(lParam);
-    switch (message)
-    {
-    case WM_INITDIALOG:
-        return (INT_PTR)TRUE;
-
-    case WM_COMMAND:
-        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
-        {
-            EndDialog(hDlg, LOWORD(wParam));
-            return (INT_PTR)TRUE;
-        }
-        break;
-    }
-    return (INT_PTR)FALSE;
 }

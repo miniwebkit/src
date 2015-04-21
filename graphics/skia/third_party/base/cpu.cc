@@ -78,6 +78,31 @@ void __cpuidex(int cpu_info[4], int info_type, int info_index) {
 }
 
 #endif
+
+#else
+void __cpuidex(int CPUInfo[4], int InfoType, int ECXValue) {
+	if (NULL == CPUInfo)
+		return;
+
+	_asm {
+		// load. 读取参数到寄存器
+		mov edi, CPUInfo;    // 准备用edi寻址CPUInfo
+		mov eax, InfoType;
+		mov ecx, ECXValue;
+		// CPUID
+		cpuid;
+		// save. 将寄存器保存到CPUInfo
+		mov    [edi], eax;
+		mov    [edi+4], ebx;
+		mov    [edi+8], ecx;
+		mov    [edi+12], edx;
+	}
+}
+
+void __cpuid(int CPUInfo[4], int InfoType) {
+	__cpuidex(CPUInfo, InfoType, 0);
+}
+
 #endif  // _MSC_VER
 #endif  // ARCH_CPU_X86_FAMILY
 

@@ -126,6 +126,8 @@ void RenderSVGRoot::layout()
         m_needsBoundariesOrTransformUpdate = false;
     }
 
+	RenderSVGRoot::layout(); // fix bug
+
     repainter.repaintAfterLayout();
 
     view()->enableLayoutState();
