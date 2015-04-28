@@ -2101,6 +2101,7 @@ bool CSSParser::parseFillShorthand(int propId, const int* properties, int numPro
     RefPtr<CSSValue> repeatYValue;
     bool foundClip = false;
     int i;
+    bool foundBackgroundPositionCSSProperty = false;
 
     while (m_valueList->current()) {
         CSSParserValue* val = m_valueList->current();
@@ -2130,8 +2131,22 @@ bool CSSParser::parseFillShorthand(int propId, const int* properties, int numPro
                 break;
         }
 
+        bool backgroundSizeCSSPropertyExpected = false;
+        if ((val->unit == CSSParserValue::Operator && val->iValue == '/') && foundBackgroundPositionCSSProperty) {
+            backgroundSizeCSSPropertyExpected = true;
+            m_valueList->next();
+        }
+
+        foundBackgroundPositionCSSProperty = false;
+
         bool found = false;
         for (i = 0; !found && i < numProperties; ++i) {
+
+            if (backgroundSizeCSSPropertyExpected && properties[i] != CSSPropertyBackgroundSize)
+                continue;
+            if (!backgroundSizeCSSPropertyExpected && properties[i] == CSSPropertyBackgroundSize)
+                continue;
+
             if (!parsedProperty[i]) {
                 RefPtr<CSSValue> val1;
                 RefPtr<CSSValue> val2;
@@ -2157,6 +2172,8 @@ bool CSSParser::parseFillShorthand(int propId, const int* properties, int numPro
                         foundClip = true;
                     }
                 }
+                if (properties[i] == CSSPropertyBackgroundPosition)
+                    foundBackgroundPositionCSSProperty =  true;
             }
         }
 
